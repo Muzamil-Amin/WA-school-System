@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap tutorials</title>
+	<link rel="stylesheet" type="text/css" a href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" a href="css/fonts.css">
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrapjquery.js"></script>
+	<script type="text/javascript" src="js/proper.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <script src="sliderengine/initslider-1.js"></script>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 1300px;
+    height: 2320px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14px;
+}
+.form-inline{
+    margin-left:890px;
+}
+.banner{
+    width: 1298px;
+    height: 200px;
+
+    position: absolute;
+    background-image: url(images/banner.png);
+    margin-top: 5px;
+}
+#name{
+    color:white;
+    margin-left: 670px;
+    font-family:Algerian;
+    letter-spacing: 1px;
+}
+
+.menu{
+    width: 1300px;
+    height: 70px;
+    position: absolute;
+    margin-top: 208px;
+    border-radius: 50px;
+}
+#logoname{
+    font-family:Algerian;
+    letter-spacing: 1px;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 125px;
+    margin-top: -40px;
+}
+.menudrop{
+    list-style-type: none;
+    margin-left: 300px;
+    margin-top: -40px;
+    color: #0d50ff;
+    
+}
+.menudrop li {
+    float: left;
+    width: 135px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 7px;
+
+}
+.menudrop li a{
+    display: block;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    background: -moz-linear-gradient   (10deg,#0073e6,#80e5ff); 
+	background: -webkit-linear-gradient(10deg,#0073e6,#80e5ff); 
+	background: linear-gradient        (10deg,#0073e6,#80e5ff);
+    border-radius: 30px;
+    color:white;
+}
+.menudrop li a:hover{
+    background: -moz-linear-gradient   (10deg,#0073e6,#003366); 
+	background: -webkit-linear-gradient(10deg,#0073e6,#003366); 
+	background: linear-gradient        (10deg,#0073e6,#003366);
+    color: white;
+    border-radius: 30px;
+    z-index: 100;
+}
+.menudrop li ul li{
+    list-style-type: none;
+}
+.menudrop li ul li a{
+    margin-left: -7px;
+    font-weight: bold;
+    width: 135px;
+    padding: 0px;
+}
+.menudrop ul {
+    opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s;
+	position:absolute;
+}
+.menudrop li:hover > ul{
+    opacity:1;
+    visibility: visible;
+    z-index: 100;
+    
+}
+.menudrop li ul li{
+    float: inherit;
+    margin-top: 9px;
+    
+    
+}
+.news{
+    width: 1300px;
+    height: 50px;
+    margin-top: 290px;
+    position: absolute;
+}
+.tag{
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    
+    background: -moz-linear-gradient   (10deg,#0073e6,#80e5ff); 
+	background: -webkit-linear-gradient(10deg,#0073e6,#80e5ff); 
+	background: linear-gradient        (10deg,#0073e6,#80e5ff);
+    color: white;
+    font-weight: bold;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+.info{
+    position: absolute;
+    margin-left: 160px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 3px;
+    background: -moz-linear-gradient   (10deg,#1a1a1a,#b3b3b3,#1a1a1a); 
+	background: -webkit-linear-gradient(10deg,#1a1a1a,#b3b3b3,#1a1a1a); 
+	background: linear-gradient        (10deg,#1a1a1a,#b3b3b3,#1a1a1a);
+    border-radius: 40px;
+    width: 1130px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.slider{
+    width: 1300px;
+    height: 400px;
+    position: absolute;
+    margin-top: 330px;
+}
+.social{
+    width: 1300px;
+    height: 100px;
+    position: absolute;
+    margin-top: 870px;
+}
+.socialf{
+    list-style-type: none;
+    margin-left: 270px;
+    margin-top: 15px;
+    
+}
+.socialg{
+    list-style-type: none;
+    margin-left: 230px;
+    margin-top: 8px;
+    
+}
+.socialt{
+    list-style-type: none;
+    margin-left: 230px;
+    margin-top: 8px;
+    
+}
+.sociali{
+    list-style-type: none;
+    margin-left: 230px;
+    margin-top: 8px;
+    
+}
+.socialy{
+    list-style-type: none;
+    margin-left: 230px;
+    margin-top: 8px;
+    
+}
+.sociali li{
+    float: left;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+    line-height: 115px;
+    background-color: #e6e6e6;
+    text-align: center;
+    border-radius: 90px;
+    
+    
+}
+.sociali li:hover{
+    background: -moz-linear-gradient   (90deg,yellow,red,purple); 
+	background: -webkit-linear-gradient(90deg,yellow,red,purple); 
+	background: linear-gradient        (90deg,yellow,red,purple);
+    
+}
+.socialf li:hover{
+    background-color: #0052cc;
+}
+.socialt li:hover{
+    background-color: #1aa3ff;
+}
+.socialy li:hover{
+    background-color: #ff0000;
+}
+.socialg li:hover{
+    background-color: #cc0000;
+}
+.socialf li a:hover{
+    display: block;
+    color: white;
+}
+.socialf li a {
+    color:#0052cc;
+    display: block;
+}
+.socialt li a {
+    color:#1aa3ff;
+    display: block;
+}
+.socialy li a {
+    color:  #ff0000;
+    display: block;
+}
+.socialg li a {
+    color: #cc0000;
+    display: block;
+}
+.sociali li a {
+    color:black;
+    display: block;
+    
+}
+.socialg li{
+    float: left;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+    line-height: 115px;
+    background-color: #e6e6e6;
+    text-align: center;
+    border-radius: 90px;
+    
+    
+}.socialy li{
+    float: left;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+    line-height: 115px;
+    background-color: #e6e6e6;
+    text-align: center;
+    border-radius: 90px;
+    color: white;
+    display: block;
+    
+}.socialf li{
+    float: left;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+    line-height: 115px;
+    background-color: #e6e6e6;
+    text-align: center;
+    border-radius: 90px;
+    
+    
+}.socialt li{
+    float: left;
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+    line-height: 115px;
+    background-color: #e6e6e6;
+    text-align: center;
+    border-radius: 90px;
+
+    
+}
+.socialg li a:hover{
+    display: block;
+    color: white;
+}
+.socialt li a:hover{
+    display: block;
+    color: white;
+}
+.sociali li a:hover{
+    display: block;
+    color: white;
+
+}
+.socialy li a:hover{
+    display: block;
+    color: white;
+}
+.statusdiv{
+    
+    position: absolute;
+    width: 1300px;
+    margin-top: 820px;
+}
+.statusdiv li {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 7px;
+    width: 800px;
+    background: -moz-linear-gradient   (10deg,#0073e6,#80e5ff,#0073e6,#80e5ff,#0073e6); 
+	background: -webkit-linear-gradient(10deg,#0073e6,#80e5ff,#0073e6,#80e5ff,#0073e6); 
+	background: linear-gradient        (10deg,#0073e6,#80e5ff,#0073e6,#80e5ff,#0073e6);
+    margin-left: 240px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 35px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+}
+.contenttext{
+    position:absolute;
+   
+    margin-top: 1010px;
+    width: 570px;
+    height: 520px;
+}
+#title{
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #0073e6;
+    margin-left: 50px;
+}
+#content{
+    text-align: left;
+    margin-left: 50px;
+    font-weight: normal;
+   font-size: 18px;
+    
+}
+.contentimg{
+    
+    position: absolute;
+    margin-top: 1010px;
+    margin-left: 590px;
+    width: 700px;
+    height: 520px;
+    background-image: url(images/content.png)
+}.statusdiv1{
+    
+    position: absolute;
+    width: 1300px;
+    margin-top: 1540px;
+}
+.statusdiv1 li {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 7px;
+    width: 800px;
+    background: -moz-linear-gradient   (10deg,#0073e6,#80e5ff,#0073e6,#0073e6,#80e5ff,#0073e6); 
+	background: -webkit-linear-gradient(10deg,#0073e6,#80e5ff,#0073e6,#0073e6,#80e5ff,#0073e6); 
+	background: linear-gradient        (10deg,#0073e6,#80e5ff,#0073e6,#0073e6,#80e5ff,#0073e6);
+    margin-left: 240px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 35px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+}
+.map{
+    position: absolute;
+    
+    margin-top: 1620px;
+    width: 892px;
+    height: 580px;
+    margin-left: 200px;
+    background-image: url(images/ne.png)
+}
+.footer{
+    position: absolute;
+    margin-top:2210px;
+    width: 1300px;
+    height: 155px; 
+    background-image: url(images/footer.png)
+}
+</style>
+</head>
+<body>
+  
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="#">
+                  <img src="images/logo.png" alt="logo" style="width:70px;">
+                </a>
+                 <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="">Search</button>
+                  </form>
+              </nav>
+              <div class="main" >   
+        <div class="banner">
+           <h1 id="name"><strong>WA &nbsp School &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Syestem</strong></h1>
+           
+        </div >    
+          <div class="menu">
+                <img src="images/logo.png" alt="logo" style="width:130px;"> 
+               <h1 id="logoname"> <strong >WA School</strong> </h1>
+
+               <ul class="menudrop">
+                   <li><a href="#"><i class="fa fa-home "></i>&nbsp&nbsp<strong>Home</strong></a></li>
+                   <li ><a href="#"><i class="fa fa-address-book"></i>&nbsp<strong>About Us</strong>&nbsp<i class="fa fa-chevron-circle-down"></i></a>
+                     <ul>
+                         <li><a href="#1">Chairperson</a></li>
+                         <li><a href="#1">Principal</a></li>
+                         <li><a href="#1">Manager</a></li>
+                         <li><a href="#1">Quardinators</a></li>
+                     </ul>
+                </li>
+                   <li><a href="#"><i class="fa fa-users"></i><strong>&nbsp Profile</strong></a></li>
+                   <li><a href="#"><i class="fa fa-calendar"></i>&nbsp <strong>Events</strong>&nbsp<i class="fa fa-chevron-circle-down"></i></a>
+                    <ul>
+                            <li><a href="#1">Year 2018</a></li>
+                            <li><a href="#12">Year 2017</a></li>
+                            <li><a href="#1">Year 2016</a></li>
+                            <li><a href="#1">Year 2015</a></li>
+                            <li><a href="#1">Year 2014</a></li>
+                            <li><a href="#1">Year 2013</a></li>
+                            <li><a href="#1">Year 2012</a></li>
+                            <li><a href="#1">Year 2011</a></li>
+                        </ul>
+                     </li>
+                   <li><a href="#"><i class="fa fa-address-card"></i>&nbsp<strong>Admission</strong>&nbsp<i class="fa fa-chevron-circle-down"></i></a>
+                    <ul>
+                            <li><a href="#1">12nd year</a></li>
+                            <li><a href="#1">11st Year</a></li>
+                            <li><a href="#1">9th or 10th</a></li>
+                            <li><a href="#1">One to Eight  </a></li>
+                            <li><a href="#1">Kinder-garden</a></li>
+                        </ul>
+                
+                </li>
+                   <li><a href="#"><i class="fa fa-graduation-cap"></i><strong>Alumni</strong>&nbsp<i class="fa fa-chevron-circle-down"></i></a>
+                    <ul>
+                            <li><a href="#1"> 2017-2018</a></li>
+                            <li><a href="#1"> 2015-2016</a></li>
+                            <li><a href="#1"> 2013-2014</a></li>
+                            <li><a href="#1"> 2011-2012</a></li>
+                            <li><a href="#1"> 2009-2010</a></li>
+                        </ul>
+                
+                </li>
+                   <li><a href="#"><i class="fa fa-sign-in"></i><strong>&nbsp <strong>Log In</strong></a></li>
+               </ul>
+          </div> 
+             <div class="news">
+                   <div class="tag"><i class="fa fa-align-left"></i>&nbsp&nbspNews</div>
+                   <div class="info"><marquee  scrollamount="10" direction="left" onmouseover="stop()" loop="" stop="center" onmouseout="start()">We Beleive In Services Through Commitment & Quality</marquee></div>
+             </div>
+               <div class="slider">
+                    <div style="margin:30px auto;max-width:1298px;">
+    
+                            <!-- Insert to your webpage where you want to display the slider -->
+                            <div id="amazingslider-1" style="display:block;position:relative;margin:16px auto 56px;">
+                                <ul class="amazingslider-slides" style="display:none;">
+                                    <li><img src="images/Slider02.jpg" alt="Our Aim is to Give International Level Education" /></li>
+                                    <li><img src="images/catholic-schools-slider.jpg" alt="Discipline" /></li>
+                                    <li><img src="images/ei5qielyk0gpucicnsil.jpeg" alt="Learn With Joy" /></li>
+                                    <li><img src="images/Slider-Schools.jpg" alt="Learn History And Grow Rich" data-texteffect="Light box" /></li>
+                                </ul>
+                                <ul class="amazingslider-thumbnails" style="display:none;">
+                                    <li><img src="images/Slider02-tn.jpg" /></li>
+                                    <li><img src="images/catholic-schools-slider-tn.jpg" /></li>
+                                    <li><img src="images/ei5qielyk0gpucicnsil-tn.jpeg" /></li>
+                                    <li><img src="images/Slider-Schools-tn.jpg" /></li>
+                                </ul>
+                                <div class="amazingslider-engine" style="display:none;"><a href="http://amazingslider.com" title="Responsive jQuery Image Slideshow">Responsive jQuery Image Slideshow</a></div>
+                            </div>
+                            </div>
+               </div>
+               <div class="statusdiv" >
+                   <Ul status>
+                   <Li>Our Social Status</Li>
+                   <ul>
+               </div>
+                            <div class="social">
+                                
+                               <ul class="socialf">
+                                   <li><a href="#"><i class="fa fa-facebook-f fa-3x"></i></a></li>
+                               </ul>
+                               
+                               <ul class="socialg">
+                                <li><a href="#"><i class="fa fa-google fa-3x"></i></a></li>
+                            </ul>
+                            <ul class="socialt">
+                                <li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+                            </ul>
+                            <ul class="sociali">
+                                <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
+                            </ul>
+
+                            <ul class="socialy">
+                                <li><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
+                            </ul>
+
+                            </div>
+                            <div class="contenttext">
+                                <p id="title">Welcome to WA School Syestem: </p>
+                                <p id="content">The WA School Syestem School System has risen &nbspfrom its modest beginnings in 1975 as Les Anges Montessori Academy to become a major force in the education world. With an ever-expanding base, already established in the UK, Malaysia, the Philippines, Pakistan, the UAE, Oman, Belgium and Thailand, Beaconhouse is one of the largest private school networks in the world.
+                                    <br>
+                                    <b>...Read More</b>
+                                </p>
+                               
+                            </div>
+                            <div class="contentimg">
+
+                            </div>
+                            <div class="statusdiv1" >
+                                    <Ul>
+                                    <Li>Our &nbspInternational&nbsp Network</Li>
+                                    <ul>
+                                </div>
+                                <div class="map">
+                                </div>
+                                <div class="footer"></div>
+  </div>
+</body>
+</html>
